@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KidApp" Class="KidAppDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-OIFTO18\SQLEXPRESS;Initial Catalog=KidApp;User ID=sa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="KidApp.Properties.Settings" SettingsPropertyName="KidAppConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EngResult" Member="EngResults">
+    <Type Name="EngResult">
+      <Column Name="engId" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="eng1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="eng2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="eng3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Image_EngResult" Member="Image" ThisKey="engId" OtherKey="imageId" Type="Image" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Image" Member="Images">
+    <Type Name="Image">
+      <Column Name="imageId" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="imageName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="timeShoot" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="userId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Image_EngResult" Member="EngResult" ThisKey="imageId" OtherKey="engId" Type="EngResult" Cardinality="One" />
+      <Association Name="Image_VieResult" Member="VieResult" ThisKey="imageId" OtherKey="vieId" Type="VieResult" Cardinality="One" />
+      <Association Name="User_Image" Member="User" ThisKey="userId" OtherKey="userId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="userId" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="dob" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="User_Image" Member="Images" ThisKey="userId" OtherKey="userId" Type="Image" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VieResult" Member="VieResults">
+    <Type Name="VieResult">
+      <Column Name="vieId" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="vie1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="vie2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="vie3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Image_VieResult" Member="Image" ThisKey="vieId" OtherKey="imageId" Type="Image" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,395 @@
+{
+	"info": {
+		"_postman_id": "9258f829-86c3-4ba1-91e6-dfca67bb253c",
+		"name": "KidApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "abcdef",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "123, Nguyễn Thị Minh Khai, Quận 1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:61247/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61247",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "abcdef",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "654321",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:61247/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61247",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changePassword",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "abcdef",
+							"type": "text"
+						},
+						{
+							"key": "old_password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "new_password",
+							"value": "654321",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:61247/api/changePassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61247",
+					"path": [
+						"api",
+						"changePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addImage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "time",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "abcdefa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:61247/api/addImage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61247",
+					"path": [
+						"api",
+						"addImage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeImage",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image_id",
+							"value": "Image1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:61247/api/removeImage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61247",
+					"path": [
+						"api",
+						"removeImage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLastImage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:61247/api/getLastImage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61247",
+					"path": [
+						"api",
+						"getLastImage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addEngResult",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image_id",
+							"value": "Image1",
+							"type": "text"
+						},
+						{
+							"key": "eng_1",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "eng_2",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "eng_3",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:61247/api/addEngResult",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61247",
+					"path": [
+						"api",
+						"addEngResult"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addVieResult",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image_id",
+							"value": "Image1",
+							"type": "text"
+						},
+						{
+							"key": "vie_1",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "vie_2",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "vie_3",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:61247/api/addVieResult",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61247",
+					"path": [
+						"api",
+						"addVieResult"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeEngResult",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "eng_id",
+							"value": "Image1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:61247/api/removeEngResult",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61247",
+					"path": [
+						"api",
+						"removeEngResult"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeVieResult",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "vie_id",
+							"value": "Image1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:61247/api/removeVieResult",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61247",
+					"path": [
+						"api",
+						"removeVieResult"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllResultOfOneUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "abcdef",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:61247/api/getAllResultOfOneUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61247",
+					"path": [
+						"api",
+						"getAllResultOfOneUser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

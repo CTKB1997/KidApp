@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="KidAppDB">
+  <DataContextMoniker Name="/KidAppDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="28952f0f-4d32-49c2-8664-d664308cfced" absoluteBounds="6.25, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/KidAppDBDataContext/EngResult" />
+      <nestedChildShapes>
+        <elementListCompartment Id="959766f3-5fc3-4571-a09c-7500b0135198" absoluteBounds="6.265, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b426004-c3f1-4030-8fbb-f029195f5870" absoluteBounds="3.5, 2.25, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/KidAppDBDataContext/Image" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f29b614-0fed-4b5c-9f88-e308be5cc184" absoluteBounds="3.515, 2.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a40bd63c-d8c8-4017-b530-2d1e5d084be4" absoluteBounds="0.75, 2.25, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/KidAppDBDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="36fc1da6-07b9-471b-8bf8-811433ed1560" absoluteBounds="0.765, 2.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="64d0cb47-6709-4c61-a651-31a3b93c8525" absoluteBounds="6.25, 3.5, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/KidAppDBDataContext/VieResult" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a69a491-0c33-4e77-ad7e-2c9fde6ce802" absoluteBounds="6.265, 3.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 2.51044840494792); (6.25 : 2.51044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KidAppDBDataContext/Image/Image_EngResult" />
+      <nodes>
+        <classShapeMoniker Id="2b426004-c3f1-4030-8fbb-f029195f5870" />
+        <classShapeMoniker Id="28952f0f-4d32-49c2-8664-d664308cfced" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.13544840494792); (3.5 : 3.13544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KidAppDBDataContext/User/User_Image" />
+      <nodes>
+        <classShapeMoniker Id="a40bd63c-d8c8-4017-b530-2d1e5d084be4" />
+        <classShapeMoniker Id="2b426004-c3f1-4030-8fbb-f029195f5870" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.76044840494792); (6.25 : 3.76044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KidAppDBDataContext/Image/Image_VieResult" />
+      <nodes>
+        <classShapeMoniker Id="2b426004-c3f1-4030-8fbb-f029195f5870" />
+        <classShapeMoniker Id="64d0cb47-6709-4c61-a651-31a3b93c8525" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
